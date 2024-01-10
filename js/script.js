@@ -73,7 +73,13 @@ form.addEventListener('submit', e => {
     //Genero le celle e le appendo alla griglia
     for (let i = 1; i <= totCells; i++) {
         const cell = createCell(difficulty, i);
+        // Creo un event listener per reagire al click sulle celle
+        cell.addEventListener('click', () => {
+            cell.classList.add('clicked');
+        })
         grid.appendChild(cell);
     }
 
 })
+
+
