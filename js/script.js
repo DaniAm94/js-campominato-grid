@@ -12,7 +12,7 @@ let totCells;
 
 /**
  * Create a cell
- * @param {string} difficulty it decide the class to be added
+ * @param {string} difficulty it decides the class to be added
  * @param {number} content the content  of the cell
  * @returns the cell
  */
@@ -82,6 +82,7 @@ form.addEventListener('submit', e => {
         // Creo un event listener per reagire al click sulle celle
         cell.addEventListener('click', () => {
             cell.classList.add('clicked');
+            console.log('Cella cliccata: ', i);
         })
         grid.appendChild(cell);
     }
