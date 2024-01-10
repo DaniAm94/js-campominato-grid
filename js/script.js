@@ -17,9 +17,16 @@ let totCells;
  * @returns the cell
  */
 const createCell = (difficulty, content) => {
+    // Creo il nodo come div
     const cell = document.createElement('div');
+
+    // Gli do la classe cell appositamente creata su css
     cell.classList.add('cell');
+
+    // GLi inserisco il contenuto
     cell.innerText = content;
+
+    // A seconda del parametro difficulty la cell avrà un'altra classe che determina la sua taglia
     switch (difficulty) {
         case 'easy':
             cell.classList.add('cell-l')
@@ -38,8 +45,14 @@ const createCell = (difficulty, content) => {
 form.addEventListener('submit', e => {
     e.preventDefault();
     const difficulty = challenge.value;
+
+    // Ripulisco la griglia
     grid.innerHTML = '';
+
+    //La rendo visibile
     grid.classList.remove('d-none');
+
+    // a seconda del valore di difficulty la griglia avrà un diverso numero di righe e colonne
     switch (difficulty) {
         case 'easy':
             rows = 7;
@@ -54,10 +67,11 @@ form.addEventListener('submit', e => {
             cols = 10;
             break;
     }
-
+    // Calcolo il numero di celle
     totCells = rows * cols;
-    for (let i = 1; i <= totCells; i++) {
 
+    //Genero le celle e le appendo alla griglia
+    for (let i = 1; i <= totCells; i++) {
         const cell = createCell(difficulty, i);
         grid.appendChild(cell);
     }
