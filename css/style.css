@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: darkslategray;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+
+/* HEADER */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -12,10 +24,66 @@ header {
     height: 100px;
     line-height: 100px;
     padding: 0 40px;
+    font-size: 1.5rem;
 }
 
 form {
     display: flex;
     align-items: center;
     column-gap: 50px;
+}
+
+select,
+button {
+    font-size: 1.5rem;
+}
+
+#play {
+    padding: 5px 10px;
+}
+
+/* MAIN */
+
+main {
+    height: calc(100vh - 170px);
+    display: flex;
+    align-items: center;
+}
+
+.grid {
+    margin: 0 auto;
+    width: 700px;
+    height: 700px;
+    background-color: crimson;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    border: 2px solid white;
+}
+
+.cell-sm {
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+}
+
+.cell-m {
+    height: calc(100% / 9);
+    width: calc(100% / 9);
+}
+
+.cell-l {
+    height: calc(100% / 7);
+    width: calc(100% / 7);
+}
+
+/* Footer */
+
+footer {
+    height: 70px;
+    background-color: white;
+    padding: 0 40px;
+    line-height: 70px;
+    font-size: 1.2rem;
 }
