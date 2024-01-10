@@ -27,3 +27,19 @@
         - Di cosa ho bisogno per generare i numeri?
     - Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
     - Le validazioni e i controlli possiamo farli anche in un secondo momento.
+
+
+### Scaletta:
+1. Preparo i fogli html e css inserendo gli elementi necessari per generare, visualizzare e stilizzare la griglia
+2. Sul file js recupero gli elementi che mi servono dal DOM
+3. Mi creo le variabii necessarie:
+    - Numero di righe
+    - Numero di colonne
+    - Il totale delle celle
+4. Procedo per gradi: 
+    1. Creo un event listener per regire alla prima azione dell'utente
+    2. Devo generare le celle:
+        - mi sposto fuori dall'eventlistener per dichiarare una funzione con cui creare le celle della griglia con tutte le sue proprietà
+    3. Torno nell'eventlistener e invoco la funzione per creare le celle e le appendo nella griglia
+    4. Creo all'esterno un nuovo event listener che reagisce al click su ogni cella
+        - Al click do una classe css alla cella per farla colorare e stampo il suo valore numerico in console
