@@ -54,13 +54,28 @@ main {
     margin: 0 auto;
     width: 700px;
     height: 700px;
-    background-color: crimson;
+    border: 2px solid white;
+    background-color: rgb(220, 20, 60);
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.grid.d-none {
+    display: none;
 }
 
 .cell {
     border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .cell-sm {
@@ -76,6 +91,10 @@ main {
 .cell-l {
     height: calc(100% / 7);
     width: calc(100% / 7);
+}
+
+.cell.clicked {
+    background-color: chocolate;
 }
 
 /* Footer */
