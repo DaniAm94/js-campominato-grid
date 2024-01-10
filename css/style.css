@@ -3,3 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 40px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
