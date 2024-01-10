@@ -44,10 +44,16 @@ const createCell = (difficulty, content) => {
 // Svolgimento
 form.addEventListener('submit', e => {
     e.preventDefault();
-    const difficulty = challenge.value;
-
     // Ripulisco la griglia
     grid.innerHTML = '';
+    const difficulty = challenge.value;
+
+    // ! Validazione
+    if (difficulty !== 'easy' && difficulty !== 'normal' && difficulty !== 'hard') {
+        alert('La difficoltà deve avere un valore tra: easy, normal e hard!');
+        return;
+    }
+
 
     //La rendo visibile
     grid.classList.remove('d-none');
